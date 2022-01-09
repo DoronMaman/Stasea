@@ -9,7 +9,7 @@
 
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills-es5"], {
     /***/
@@ -466,7 +466,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /Users/dmaman/Desktop/DevopsMakeup/MakeUp/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
+      /*! /Users/dmaman/Desktop/makeup/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
       "voQr");
 
       __webpack_require__(
@@ -474,7 +474,7 @@
       "R0gw");
 
       module.exports = __webpack_require__(
-      /*! /Users/dmaman/Desktop/DevopsMakeup/MakeUp/src/polyfills.ts */
+      /*! /Users/dmaman/Desktop/makeup/src/polyfills.ts */
       "hN/g");
       /***/
     },
@@ -2941,7 +2941,9 @@
             };
         }
 
-        return function () {
+        return function ()
+        /* ...args */
+        {
           return fn.apply(that, arguments);
         };
       };
@@ -3095,7 +3097,9 @@
         var fn = aFunction(this);
         var partArgs = slice.call(arguments, 1);
 
-        var boundFunction = function bound() {
+        var boundFunction = function bound()
+        /* args... */
+        {
           var args = partArgs.concat(slice.call(arguments));
           return this instanceof boundFunction ? construct(fn, args.length, args) : fn.apply(that, args);
         };
@@ -5338,22 +5342,13 @@
       !*** ./node_modules/@angular/localize/fesm2015/init.js ***!
       \*********************************************************/
 
-    /*! exports provided: $localize */
+    /*! no static exports found */
 
     /***/
-    function NDB(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "$localize", function () {
-        return $localize;
-      });
+    function NDB(module, exports) {
       /**
-       * @license Angular v11.2.14
-       * (c) 2010-2021 Google LLC. https://angular.io/
+       * @license Angular v11.0.9
+       * (c) 2010-2020 Google LLC. https://angular.io/
        * License: MIT
        */
 
@@ -5364,8 +5359,6 @@
        * Use of this source code is governed by an MIT-style license that can be
        * found in the LICENSE file at https://angular.io/license
        */
-
-
       var __globalThis = typeof globalThis !== 'undefined' && globalThis;
 
       var __window = typeof window !== 'undefined' && window;
@@ -5409,7 +5402,7 @@
        * ```
        *
        * This format is the same as that used for `i18n` markers in Angular templates. See the
-       * [Angular 18n guide](guide/i18n#mark-text-for-translations).
+       * [Angular 18n guide](guide/i18n#template-translations).
        *
        * **Naming placeholders**
        *
@@ -5473,13 +5466,9 @@
        * the original template literal string without applying any translations to the parts. This
        * version is used during development or where there is no need to translate the localized
        * template literals.
-       *
        * @param messageParts a collection of the static parts of the template string.
        * @param expressions a collection of the values of each placeholder in the template string.
        * @returns the translated string, with the `messageParts` and `expressions` interleaved together.
-       *
-       * @globalApi
-       * @publicApi
        */
 
 
@@ -7988,7 +7977,9 @@
         stat: true,
         forced: ISNT_GENERIC
       }, {
-        of: function of() {
+        of: function of()
+        /* ...args */
+        {
           var index = 0;
           var argumentsLength = arguments.length;
           var result = new (typeof this == 'function' ? this : Array)(argumentsLength);
@@ -9923,6 +9914,10 @@
       var _angular_localize_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/localize/init */
       "N/DB");
+      /* harmony import */
+
+
+      var _angular_localize_init__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_angular_localize_init__WEBPACK_IMPORTED_MODULE_0__);
       /* harmony import */
 
 
@@ -12935,7 +12930,7 @@
 
           var noop = function noop() {};
 
-          var ZoneAwarePromise = /*#__PURE__*/function (_Symbol$toStringTag, _Symbol$species) {
+          var ZoneAwarePromise = /*#__PURE__*/function () {
             function ZoneAwarePromise(executor) {
               _classCallCheck(this, ZoneAwarePromise);
 
@@ -12956,12 +12951,12 @@
             }
 
             _createClass(ZoneAwarePromise, [{
-              key: _Symbol$toStringTag,
+              key: Symbol.toStringTag,
               get: function get() {
                 return 'Promise';
               }
             }, {
-              key: _Symbol$species,
+              key: Symbol.species,
               get: function get() {
                 return ZoneAwarePromise;
               }
@@ -13167,7 +13162,7 @@
             }]);
 
             return ZoneAwarePromise;
-          }(Symbol.toStringTag, Symbol.species); // Protect against aggressive optimizers dropping seemingly unused properties.
+          }(); // Protect against aggressive optimizers dropping seemingly unused properties.
           // E.g. Closure Compiler in advanced mode.
 
 
@@ -17281,22 +17276,22 @@
               if (TYPE) {
                 if (IS_MAP) target[index] = result; // map
                 else if (result) switch (TYPE) {
-                  case 3:
-                    return true;
-                  // some
+                    case 3:
+                      return true;
+                    // some
 
-                  case 5:
-                    return value;
-                  // find
+                    case 5:
+                      return value;
+                    // find
 
-                  case 6:
-                    return index;
-                  // findIndex
+                    case 6:
+                      return index;
+                    // findIndex
 
-                  case 2:
-                    push.call(target, value);
-                  // filter
-                } else if (IS_EVERY) return false; // every
+                    case 2:
+                      push.call(target, value);
+                    // filter
+                  } else if (IS_EVERY) return false; // every
               }
             }
           }
