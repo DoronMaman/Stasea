@@ -1009,7 +1009,7 @@
         selectors: [["app-about"]],
         decls: 3,
         vars: 3,
-        consts: [[4, "ngIf"], [1, "wrapper-about-eng"], [1, "wrapper-body-text"], [1, "headr-body-eng"], [1, "p-style"], [1, ""], [1, "gallery-item"], ["src", "../../assets/Images/about.jpg", 1, "gallery-image"], [1, "wrapper-about"], [1, "headr-body"], [1, "style-div-about"], [1, "p-style", "text-aligment"], [1, "p-style", "text-aligment-one-line"]],
+        consts: [[4, "ngIf"], [1, "wrapper-about-eng"], [1, "wrapper-body-text"], [1, "headr-body-eng"], [1, "p-style"], [1, ""], [1, "gallery-item"], ["src", "../../Stasea/assets/Images/about.jpg", 1, "gallery-image"], [1, "wrapper-about"], [1, "headr-body"], [1, "style-div-about"], [1, "p-style", "text-aligment"], [1, "p-style", "text-aligment-one-line"]],
         template: function AboutComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AboutComponent_div_0_Template, 22, 0, "div", 0);
